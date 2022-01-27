@@ -17,8 +17,6 @@ public class Exercise2 {
             tmp += words[i].substring(1).toLowerCase();
             tmp += " ";
         }
-
         System.out.println(tmp.trim());
-
     }
     }
