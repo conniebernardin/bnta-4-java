@@ -16,19 +16,18 @@ public class WorkingWithFiles {
                 System.out.println("File does not exist");
             }
         }
-        FileWriter fileWriter = new FileWriter(fileExample); //creating file writer using FileWriter class
-        PrintWriter printWriter = new PrintWriter(fileExample); //creating print writer using FileWriter class
-        printWriter.print("This is a new file.");  //printing string into file
+        FileWriter fileWriter = new FileWriter(fileExample, true); //creating file writer using FileWriter class. to append type true!
+        PrintWriter printWriter = new PrintWriter(fileWriter); //creating print writer using FileWriter class
+        printWriter.println("This is a file created using java.");  //printing string into file
+        printWriter.println("I can write lines and append them using the printWriter tool.");  //printing string into file
 
         printWriter.flush();
         printWriter.close();
+        System.out.println("Contents added successfully to file.");
 
-        Scanner scanner = new Scanner(fileExample);
-        while (scanner.hasNext()){
-            System.out.println(scanner.nextLine());
+//        Scanner scanner = new Scanner(fileExample);
+//        while (scanner.hasNext()){
+//            System.out.println(scanner.nextLine());
         }
     }
 
-
-
-}
