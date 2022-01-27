@@ -25,9 +25,9 @@ public class WorkingWithFiles {
         printWriter.close();
         System.out.println("Contents added successfully to file.");
 
-//        Scanner scanner = new Scanner(fileExample);
-//        while (scanner.hasNext()){
-//            System.out.println(scanner.nextLine());
+        Scanner scanner = new Scanner(fileExample); //create new scanner
+        while (scanner.hasNext()){ //while file being scanned has a next line, scanner continues to scan
+            System.out.println(scanner.nextLine()); //scanner reads each line from file (called fileExample) and prints in console
         }
-    }
+    } }
 
